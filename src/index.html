@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Img editor</title>
+  
+  <!-- file  Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- container -->
+  <div class="container">
+    <div class="img">
+      <div class="img-box">
+        <img id="img"/>
+        <canvas id="canvas"></canvas>
+      </div>
+      <div class="upload">
+        <label for="upload">Upload</label>
+        <input type="file" id="upload"/>
+      </div>
+    </div>
+    <div class="filters">
+      <ul>
+        <!-- saturate filter -->
+        <li>
+          <label for="saturate">Saturate</label>
+          <input type="range" id="saturate" min="0" max="200" value="100"/>
+        </li>
+        <!-- cotrast filter -->
+        <li>
+         <label for="cotrast">Cotrast</label>
+          <input type="range" id="cotrast" min="0" max="200" value="100" />
+          </li>
+           <!-- birghtness filter -->
+           <li>
+             <label for="birghtness">Birghtness</label>
+            <input type="range" id="birghtness" min="0" max="200" value="100" />
+            </li>
+            <!-- sepia filter -->
+            <li>
+           <label for="sepia">Sepia</label>
+           <input type="range" id="sepia" min="0" max="200" value="0" />
+           </li>
+         
+         <li>
+           <label for="grayscale">Grayscale</label>
+           <input type="range" id="grayscale" min="0" max="1" step="0.1" value="0" />
+         </li>
+         <!-- blur filter -->
+          <li>
+              <label for="blur">blur</label>
+              <input type="range" id="blur" min="0" max="10" step="0.1" value="0" />
+            </li>
+            <!-- hue-rotate -->
+            <li>
+                <label for="hue-rotate">hue-rotate</label>
+                <input type="range" id="hue-rotate" min="0" max="350"  value="0" />
+            </li>
+              <!-- button -->
+            <li>
+                <a download="ture" id="download">Download</a>
+                <span onclick="resnetValue()">Resnet</span>
+            </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Js file -->
+  <script src="main.js"></script>
+</body>
+</html>
